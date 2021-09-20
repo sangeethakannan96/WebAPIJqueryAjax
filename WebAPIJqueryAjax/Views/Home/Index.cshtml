@@ -1,0 +1,58 @@
+﻿@model WebAPIJqueryAjax.Models.Product
+
+<br />
+
+<div class="row" style="border:2px solid black; margin:0 auto; padding: 20px">
+    <input type="hidden" id="txtProductId" name="txtProductId" value="0" />
+
+    <div class="col-md-2">
+        Name
+    </div>
+    <div class="col-md-10">
+        <input type="text" id="txtProductName" class="form-control" placeholder="Enter Product Name" />
+
+    </div>
+
+
+    <div class="col-md-2">
+        Price
+    </div>
+    <div class="col-md-10">
+        <input type="text" id="txtProductPrice" class="form-control" placeholder="Enter Product Price" />
+
+    </div>
+
+
+    <div class="col-md-2">
+        Quantity
+    </div>
+    <div class="col-md-10">
+        <input type="text" id="txtProductQuantity" class="form-control" placeholder="Enter Product quantity" />
+
+    </div>
+
+    <div class="col-md-12">
+        <button class="btn btn-primary" onclick="SaveProduct();">Save Product</button>
+        <button class="btn btn-danger" onclick="clear();">Reset</button>
+    </div>
+</div>
+
+<br />
+
+<div class="row">
+    <table class="table table-bordered table-striped table-responsive">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Active</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+        </thead>
+        <tbody id="tblProductBody"></tbody>
+    </table>
+</div>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/Product.js"></script>
